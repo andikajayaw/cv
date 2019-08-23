@@ -1,0 +1,11 @@
+- name: PHP
+  percent: 65%
+  
+- name: Java
+  percent: 60%
+
+- name: Ruby on Rails
+  percent: 50%
+
+- name: GIT
+  percent: 65%

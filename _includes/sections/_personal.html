@@ -1,0 +1,69 @@
+<section class="timeline skills" id="skills">
+
+    <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+    <div class="line row timeline-margin">
+        <div class="content-wrap">
+            <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+            <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+            <div class="col-md-9 bg1 full-height"></div>
+        </div>
+    </div>
+    <!-- /VERTICAL MARGIN -->
+
+    <!-- SECTION TITLE -->
+    <div class="line row">
+        <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height"></div>
+        <!-- /VERTICAL MARGIN (necessary for the timeline effect) -->
+        <!-- Item Content -->
+        <div class="col-md-8 content-wrap bg1">
+            <!-- Section title -->
+            <h2 class="section-title">Skills</h2>
+            <!-- /Section title -->
+        </div>
+        <!-- /Item Content -->
+        <!-- Margin Collum-->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <!-- /Margin Collum-->
+    </div>
+    <!-- /SECTION TITLE -->
+
+    <!-- SECTION ITEM -->
+    <div class="line row">
+        <!-- Margin Collums (necessary for the timeline effect) -->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+        <!-- / Margin Collums -->
+        <!-- Item Content -->
+        <div class="col-md-8 content-wrap bg1">
+            <div class="line-content">
+                <!-- Subtitle -->
+                <h3 class="section-item-title-1">Professional Skills</h3>
+                <!-- /Subtitle -->
+                <!-- content -->
+                <ul class="skills-list">
+                    <!-- item-list -->
+                    {% for personal in site.data.personalSkills %}
+                        <li>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-percent="{{ personal.percent }}" style="width: {{ personal.percent }};">
+                                    <span class="sr-only">{{ personal.name }}</span>
+                                </div>
+                                <span class="progress-type">{{ personal.name }}</span>
+                                <span class="progress-completed">{{ personal.percent }}</span>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    <!-- /item list -->
+                </ul>
+                <!-- /Content -->
+            </div>
+        </div>
+        <!-- /Item Content -->
+        <!-- Margin Collum-->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <!-- /Margin Collum-->
+    </div>
+    <!-- /SECTION ITEM -->
+</section>

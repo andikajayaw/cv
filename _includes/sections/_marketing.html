@@ -1,0 +1,38 @@
+ <!-- SECTION ITEM -->
+ <div class="line row">
+        <!-- Margin Collums (necessary for the timeline effect) -->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+        <!-- /Margin Collums -->
+        <!-- Item Content -->
+        <div class="col-md-8 content-wrap bg1">
+            <div class="line-content">
+                <!-- Subtitle -->
+                <h3 class="section-item-title-1">Digital Marketing Skills</h3>
+                <!-- /Subtitle -->
+                <!-- content -->
+                <ul class="skills-list">
+                    <!-- item-list -->
+                    {% for marketing in site.data.marketingSkills %}
+                       <li>
+                           <div class="progress">
+                               <div class="progress-bar" data-percent="{{ marketing.percent }}" role="progressbar"
+                                   style="width: {{ marketing.percent }};">
+                                   <span class="sr-only">{{ marketing.name }}</span>
+                               </div>
+                               <span class="progress-type">{{ marketing.name }}</span>
+                               <span class="progress-completed">{{ marketing.percent }}</span>
+                           </div>
+                       </li>
+                    {% endfor %}
+                    <!-- /item list -->
+                </ul>
+                <!-- /Content -->
+            </div>
+        </div>
+        <!-- /Item Content -->
+        <!-- Margin Collum-->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <!-- /Margin Collum-->
+    </div>
+    <!-- /SECTION ITEM -->

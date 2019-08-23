@@ -1,0 +1,11 @@
+- name: Social Media Marketing
+  percent: 85%
+
+- name: Google Ads
+  percent: 80%
+
+- name: Content Marketing
+  percent: 75%
+
+- name: Sales & Marketing
+  percent: 70%

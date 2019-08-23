@@ -1,0 +1,63 @@
+<section class="timeline work-experience" id="works">
+
+    <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+    <div class="line row timeline-margin">
+        <div class="content-wrap">
+            <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+            <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+            <div class="col-md-9 bg1 full-height"></div>
+        </div>
+    </div>
+    <!-- /VERTICAL MARGIN -->
+
+    <!-- SECTION TITLE -->
+    <div class="line row">
+        <!-- Margin Collums (necessary for the timeline effect) -->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height"></div>
+        <!-- /Margin Collums -->
+        <!-- Item Content -->
+        <div class="col-md-8 content-wrap bg1">
+            <!-- Section title -->
+            <h2 class="section-title">Work Experience</h2>
+            <!-- /Section title -->
+        </div>
+        <!-- /Item Content -->
+        <!-- Margin Collum-->
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <!-- /Margin Collum-->
+    </div>
+    <!-- /SECTION TITLE -->
+
+    {% for experience in site.data.experience %}
+        <!-- SECTION ITEM -->
+        <div class="line row">
+            <!-- Margin Collums (necessary for the timeline effect) -->
+            <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+            <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-work "></div>
+            <!-- /Margin Collums -->
+            <!-- Item Content -->
+            <div class="col-md-8 content-wrap bg1">
+                <div class="line-content line-content-education">
+                    <!-- Work Place -->
+                    <h3 class="section-item-title-1">{{ experience.company }}</h3>
+                    <!-- /work place -->
+                    <!-- Graduation time -->
+                    <h4 class="job"><i class="fa fa-flag"></i> {{ experience.job }} - <span class="job-date">{{ experience.duration }}</span></h4>
+                    <!-- /Graduation time -->
+                    <!-- content -->
+                    <div class="job-description">
+                        <p>{{ experience.desc }}</p>
+                    </div>
+                    <!-- /Content -->
+                </div>
+            </div>
+            <!-- /Item Content -->
+            <!-- Margin Collum-->
+            <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+            <!-- /Margin Collum-->
+        </div>
+        <!-- /SECTION ITEM -->
+    {% endfor %}
+
+</section>

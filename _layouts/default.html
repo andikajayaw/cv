@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body data-spy="scroll" data-target="#side-menu">
+
+    <!-- Page Loader
+========================================================= -->
+    <div class="loader" id="page-loader">
+        <div class="loading-wrapper">
+            <div class="tp-loader spinner"></div>
+            <!-- Edit With Your Name -->
+            <div class="side-menu-name">
+                Andika <strong>Jaya</strong>
+            </div>
+            <!-- /Edit With Your Name -->
+            <!-- Edit With Your Job -->
+            <p class="side-menu-job">Digital Marketer & Junior Web Developer</p>
+            <!-- /Edit With Your Job -->
+        </div>
+    </div>
+    <!-- /End of Page loader
+========================================================= -->
+
+    <!-- SIDE MENU
+========================================================= -->
+    {% include side_menu.html %}
+
+    <!-- /SIDE MENU
+========================================================= -->
+
+    <!-- CONTENT
+========================================================= -->
+    <section id="content-body" class="container animated">
+        <div class="row" id="intro">
+            {% include header.html %}
+
+
+            <!-- =============== PROFILE INTRO ====================-->
+            {% include sections/_intro.html %}
+            <!-- ============  /PROFILE INTRO ================= -->
+
+            <!-- ============  TIMELINE ================= -->
+            <div class="timeline-wrap">
+                <div class="timeline-bg">
+
+                    <!-- ====>> SECTION: PROFILE INFOS <<====-->
+                    {% include sections/_profile.html %}
+                    <!-- ==>> /SECTION: PROFILE INFOS -->
+
+                    <!-- ====>> SECTION: EDUCATION <<====-->
+                    {% include sections/_education.html %}
+                    <!-- ==>> /SECTION: EDUCATION <<==== -->
+
+                    <!-- ====>> SECTION: WORK EXPERIENCE <<====-->
+                    {% include sections/_experience.html %}
+                    <!-- ==>> /SECTION: WORK EXPERIENCE <<==== -->
+
+                    <!-- ====>> SECTION: SKILLS <<====-->
+                    {% include sections/_personal.html %} {% include sections/_language.html %} {% include sections/_programming.html %} {% include sections/_marketing.html %}
+                    <!-- ==>> /SECTION: SKILLS -->
+
+                    <!-- ====>> SECTION: INTERESTS <<====-->
+                    {% include sections/_interests.html %}
+                    <!-- ==>> /SECTION: INTERESTS -->
+
+                    <!-- ====>> SECTION: PORTFOLIO <<====-->
+                    {% include sections/_portfolio.html %}
+                    <!-- ==>> /SECTION: PORTFOLIO -->
+
+                    <!-- ====>> SECTION: CONTACT <<====-->
+                    {% include sections/_contact.html %}
+                    <!-- ==>> /SECTION: CONTACT -->
+
+                    <!-- ====>> SECTION: THANK YOU <<====-->
+                    {% include sections/_thankyou.html %}
+                    <!-- ==>> /SECTION: PROFILE INFOS -->
+                </div>
+            </div>
+            <!-- ============  /TIMELINE ================= -->
+
+            <!-- ============  FOOTER ================= -->
+            <footer id="footer" class="row">
+                <!-- Put your Quote Here-->
+                <p class="quote">“Ideas are the beginning points of all fortunes”</p>
+                <!-- /Quote -->
+                <!-- Quote Autor -->
+                <p class="author">Napoleon Hill</p>
+                <!-- /Quote Autor -->
+            </footer>
+            <!-- ============  /FOOTER ================= -->
+        </div>
+        </div>
+    </section>
+    <!-- /CONTENT
+========================================================= -->
+
+    <!-- Contact Form - Ajax Messages
+========================================================= -->
+    <!-- Form Sucess -->
+    <div class="form-result modal-wrap" id="contactSuccess">
+        <div class="modal-bg"></div>
+        <div class="modal-content">
+            <h4 class="modal-title"><i class="fa fa-check-circle"></i> Success!</h4>
+            <p>Your message has been sent to us.</p>
+        </div>
+    </div>
+    <!-- /Form Sucess -->
+    <!-- form-error -->
+    <div class="form-result modal-wrap" id="contactError">
+        <div class="modal-bg"></div>
+        <div class="modal-content">
+            <h4 class="modal-title"><i class="fa fa-times"></i> Error</h4>
+            <p>There was an error sending your message.</p>
+        </div>
+    </div>
+    <!-- /form-error -->
+
+    <!-- Contact Form - Ajax Messages
+========================================================= -->
+
+    {% include script.html %}
+</body>
+
+</html>
